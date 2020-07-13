@@ -21,7 +21,9 @@ class Options:
     def __init__(self):
         self._formatters = { cls.get_option_name(): cls for cls in _get_all_subclasses(ConfigFormatter_Base) }
 
-        parser = ArgumentParser()
+        parser = ArgumentParser(
+            description="Reads info written by mpidb from stdin and generates one of the available debug configuration formats.",
+            epilog="abc\n\tefg\n\thaha")
 
         parser.add_argument("format", choices=self._formatters.keys(),
             help="Format of the configuration file.")
