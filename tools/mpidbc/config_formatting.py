@@ -36,7 +36,7 @@ class ConfigFormatter_Base(ABC):
 
 class ConfigFormatter_PlainText(ConfigFormatter_Base):
     _OPTION_NAME = "txt"
-    _OPTION_HELP = "Simple human-readable plain-text format"
+    _OPTION_HELP = "Simple human-readable plain-text format."
 
     def write_config(self, file):
         file.write(f"{self._config_name}\n{self._app_name}\n")
@@ -60,7 +60,11 @@ class ConfigFormatter_PlainText(ConfigFormatter_Base):
 
 class ConfigFormatter_VSCode(ConfigFormatter_Base):
     _OPTION_NAME = "vscode"
-    _OPTION_HELP = ""
+    _OPTION_HELP = (
+        "Creates launch configuration file for Visual Studio Code. Usually, named 'launch.json' "
+        "and placed in the '.vscode' directory in your workspace folder. Allows for spawning "
+        "of multiple concurrent debugging sessions via compound configurations. The compound "
+        "configuration has the suffix 'all ranks'.")
 
     _config_template = {
         "name": None,
