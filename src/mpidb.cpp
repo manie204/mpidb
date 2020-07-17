@@ -49,6 +49,16 @@ int main(int argc, char ** argv)
             return -1;
         }
     }
+    catch (OptionsException & e)
+    {
+        std::cerr << e.what() << std::endl;
+        return -1;
+    }
+    catch (EnvException & e)
+    {
+        std::cerr << e.what() << std::endl;
+        return -1;
+    }
     catch (std::exception & e)
     {
         std::cerr << "Caught exception: " << e.what() << ".\nThis may be a bug." << std::endl;

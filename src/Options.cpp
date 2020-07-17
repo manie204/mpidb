@@ -260,11 +260,11 @@ Options::Option Options::ParseOption(const std::string & word)
 
 
 OptionsException::OptionsException(const std::string & message)
-    : message("Error parsing command-line arguments: " + message + "\nFor more information, use the --help option.")
+    : message("Error parsing command-line arguments: " + message + "\nFor more information, use --help.")
 {}
 
 OptionsException::OptionsException(const std::string & message, int argNum)
-    : message("Error parsing command-line argument #" + std::to_string(argNum) + ": " + message + "\nFor more information, use the --help option.")
+    : message("Error parsing command-line argument #" + std::to_string(argNum) + ": " + message + "\nFor more information, use --help.")
 {}
 
 const char * OptionsException::what() const noexcept
