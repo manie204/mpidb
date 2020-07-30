@@ -5,7 +5,7 @@ Helper tool that formats output of *mpidb* according to one of the available tem
 ## Currently available templates
 
 * txt
-  * Easy-to-read plain-text format that can easily parsed by external tools.
+  * Easy-to-read plain-text format that can easily be parsed by external tools.
 * vscode
   * Launch-configuration file (```launch.json```) for [Visual Studio Code](https://github.com/Microsoft/vscode).
   * To launch the debugging session from within the IDE:
